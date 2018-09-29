@@ -11,5 +11,3 @@ public class ConnorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_connor);
     }
 }
-//this is a test
-//connor activity
