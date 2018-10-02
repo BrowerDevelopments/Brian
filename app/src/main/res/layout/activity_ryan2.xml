@@ -11,16 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to page 1!"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="555dp" />
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="532dp" />
 
-    <EditText
-        android:id="@+id/editText2"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="Page 2!"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="489dp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="460dp" />
+
 </android.support.constraint.ConstraintLayout>

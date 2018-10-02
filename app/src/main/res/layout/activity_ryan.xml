@@ -14,13 +14,21 @@
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="461dp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="107dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="116dp"
+        android:layout_height="55dp"
         android:text="Page 1!"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="386dp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="226dp" />
 </android.support.constraint.ConstraintLayout>
