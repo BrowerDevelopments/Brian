@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".RyanActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Page 2"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="107dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Page 1!"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="386dp" />
 </android.support.constraint.ConstraintLayout>
