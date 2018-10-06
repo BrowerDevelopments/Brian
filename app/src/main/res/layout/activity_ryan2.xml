@@ -6,33 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".RyanActivity2">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Go to page 1!"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
 
-    <TextView
-        android:id="@+id/textView2"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+
+            <ImageButton
+                android:id="@+id/navMenuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_hamburger"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/page_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sources"
+                android:textColor="#FFFFFF"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                android:layout_toRightOf="@+id/navMenuButton"
+                android:paddingLeft="6dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_more"
+                android:background="@null"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.BottomNavigationView
         android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Page 2!"
-        android:textSize="30sp"
-        android:textStyle="bold|italic"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="460dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@color/colorText"
+        android:elevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_home"
+                android:background="@null"
+                android:layout_gravity="center_vertical"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:src="@drawable/ic_action_hamburger" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/ic_action_hamburger"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </android.support.design.widget.BottomNavigationView>
+
 
 </android.support.constraint.ConstraintLayout>
