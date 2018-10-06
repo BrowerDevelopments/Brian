@@ -23,7 +23,11 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
+<<<<<<< HEAD
                                                 <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_home_black_24dp.xml" />
+=======
+                                                <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_store_black_24dp.xml" />
+>>>>>>> origin/Jacob_Brower_branch
                                               </map>
                                             </option>
                                           </PersistentState>
