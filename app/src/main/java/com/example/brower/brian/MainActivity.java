@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent ryan = new Intent(this, Brower.class);
+        Intent ryan = new Intent(this, SourcesActivity.class);
         startActivity(ryan);
     }
 }
