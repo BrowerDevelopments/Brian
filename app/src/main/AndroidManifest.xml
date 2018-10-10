@@ -20,7 +20,7 @@
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme" />
-<<<<<<< HEAD
+
         <activity android:name=".RyanActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,9 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-=======
         <activity android:name=".SourcesActivity"></activity>
->>>>>>> origin/Jacob_Brower_branch
     </application>
 
 </manifest>
