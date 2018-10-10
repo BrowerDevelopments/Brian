@@ -23,7 +23,7 @@
         </activity>
 
         <activity android:name=".SourcesActivity"></activity>
-
+        <!-- This is a change -->
     </application>
 
 </manifest>
