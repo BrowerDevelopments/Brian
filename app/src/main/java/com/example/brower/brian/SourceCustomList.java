@@ -21,7 +21,7 @@ public class SourceCustomList extends ArrayAdapter<SourceClass> {
     public SourceCustomList(ArrayList<SourceClass> element, Context context) {
         super(context, R.layout.source_item, element);
         this.data_set = element;
-        this.context = context
+        this.context = context;
     }
 
 }
