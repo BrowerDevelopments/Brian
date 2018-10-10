@@ -6,52 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".SourcesActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="3dp">
-
-            <ImageButton
-                android:id="@+id/navMenuButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_hamburger"
-                android:background="@null"/>
-
-            <TextView
-                android:id="@+id/page_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sources"
-                android:textColor="#FFFFFF"
-                android:textAppearance="@android:style/TextAppearance.Material.Title"
-                android:layout_toRightOf="@+id/navMenuButton"
-                android:paddingLeft="6dp"/>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_more"
-                android:background="@null"
-                android:layout_alignParentRight="true"/>
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.Toolbar> <!-- toolbar -->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp">
+
+                <ImageButton
+                    android:id="@+id/navMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_hamburger"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/page_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sources"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_toRightOf="@+id/navMenuButton"
+                    android:paddingLeft="6dp"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_more"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar> <!-- toolbar -->
 
         <ListView
             android:id="@+id/source_list"
