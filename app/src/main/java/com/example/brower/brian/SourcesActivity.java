@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class SourcesActivity extends AppCompatActivity {
 
-    ArrayList<SourceClass> source;
-    ListView source_list;
-    private static SourceCustomList source_custom_list;
+//    ArrayList<SourceClass> source;
+//    ListView source_list;
+//    private static SourceCustomList source_custom_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
