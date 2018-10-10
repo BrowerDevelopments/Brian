@@ -13,7 +13,7 @@ public class RyanActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ryan2);
 
-        button2 = findViewById(R.id.button2);
+//        button2 = findViewById(R.id.button2);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
