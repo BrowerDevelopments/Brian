@@ -24,7 +24,10 @@
             </intent-filter>
         </activity>
         <!-- This is a change -->
-        <activity android:name=".UserVerificationActivity"></activity>
+        <activity android:name=".UserVerificationActivity" />
+        <activity android:name=".quiz.QuizActivity" />
+        <activity android:name=".quiz.QuizResultsActivity" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>

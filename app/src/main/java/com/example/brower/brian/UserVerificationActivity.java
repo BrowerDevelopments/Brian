@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.brower.brian.quiz.QuizActivity;
+
 public class UserVerificationActivity extends AppCompatActivity {
     private Button accept_button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +28,7 @@ public class UserVerificationActivity extends AppCompatActivity {
     }
 
     public void openNextActivity() {
-        Intent intent = new Intent(this, SourcesActivity.class);
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 
