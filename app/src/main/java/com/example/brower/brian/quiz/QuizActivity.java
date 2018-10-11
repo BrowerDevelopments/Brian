@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.brower.brian.HomeActivity;
 import com.example.brower.brian.R;
 
 public class QuizActivity extends AppCompatActivity {
@@ -22,7 +24,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button quit_button;
 
 //    Menu Bar Buttons
-    private Button home;
+    private ImageButton home_button;
 
     // CHANGE BASED ON NUM OF QUESTIONS
     private int questionNumberMax = 3;
@@ -35,6 +37,14 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        home_button = (ImageButton)findViewById(R.id.home_button);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
 
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
@@ -150,6 +160,11 @@ public class QuizActivity extends AppCompatActivity {
         else {
             return false;
         }
+    }
+
+    public void openHomeActivity() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 
     public static int getmScore() {

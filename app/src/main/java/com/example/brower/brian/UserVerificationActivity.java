@@ -17,7 +17,6 @@ public class UserVerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_verification);
 
         accept_button = (Button) findViewById(R.id.accept_button);
-
         accept_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
