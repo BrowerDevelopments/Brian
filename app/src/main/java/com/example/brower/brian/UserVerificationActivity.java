@@ -20,14 +20,14 @@ public class UserVerificationActivity extends AppCompatActivity {
         accept_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextActivity();
+                openExploreActivity();
             }
         });
 
     }
 
-    public void openNextActivity() {
-        Intent intent = new Intent(this, QuizActivity.class);
+    public void openExploreActivity() {
+        Intent intent = new Intent(this, ExploreActivity.class);
         startActivity(intent);
     }
 

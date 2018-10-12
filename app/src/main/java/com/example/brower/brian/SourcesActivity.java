@@ -12,7 +12,9 @@ import java.util.ArrayList;
 
 public class SourcesActivity extends AppCompatActivity {
 
-    private ImageButton home_button;
+    private ImageButton explore_button;
+    private ImageButton settings_button;
+
     ArrayList<SourceClass> source;
     ListView source_list;
     private static SourceCustomList source_custom_list;
@@ -22,17 +24,30 @@ public class SourcesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sources);
 
-        home_button = (ImageButton)findViewById(R.id.home_button);
-        home_button.setOnClickListener(new View.OnClickListener() {
+        explore_button = (ImageButton)findViewById(R.id.explore_button);
+        explore_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openExploreActivity();
+            }
+        });
+
+        settings_button = (ImageButton)findViewById(R.id.settings_button);
+        settings_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettingsActivity();
             }
         });
     }
 
-    public void openHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
+    public void openExploreActivity() {
+        Intent intent = new Intent(this, ExploreActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSettingsActivity() {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }
