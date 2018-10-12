@@ -5,10 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class SourcesActivity extends AppCompatActivity {
 
@@ -43,19 +39,19 @@ public class SourcesActivity extends AppCompatActivity {
             }
         });
 
-        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
-        quiz_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuizActivity();
-            }
-        });
-
         sources_button = (ImageButton)findViewById(R.id.sources_button);
         sources_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSourcesActivity();
+            }
+        });
+
+        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
+        quiz_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity();
             }
         });
     }

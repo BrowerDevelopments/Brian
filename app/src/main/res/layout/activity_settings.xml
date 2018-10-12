@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/navMenuButton"
                 android:paddingLeft="6dp"
-                android:text="Sources"
+                android:text="Settings"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 android:textColor="#FFFFFF" />
 
