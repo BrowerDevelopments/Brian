@@ -12,12 +12,15 @@ import java.util.ArrayList;
 
 public class SourcesActivity extends AppCompatActivity {
 
-    private ImageButton explore_button;
-    private ImageButton settings_button;
+//    ArrayList<SourceClass> source;
+//    ListView source_list;
+//    private static SourceCustomList source_custom_list;
 
-    ArrayList<SourceClass> source;
-    ListView source_list;
-    private static SourceCustomList source_custom_list;
+    String[] sources = {"Source 1", "Source 2", "Source 3", "Source 4"};
+    private ImageButton quiz_button;
+    private ImageButton explore_button;
+    private ImageButton sources_button;
+    private ImageButton settings_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,22 @@ public class SourcesActivity extends AppCompatActivity {
                 openSettingsActivity();
             }
         });
+
+        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
+        quiz_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity();
+            }
+        });
+
+        sources_button = (ImageButton)findViewById(R.id.sources_button);
+        sources_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSourcesActivity();
+            }
+        });
     }
 
     public void openExploreActivity() {
@@ -48,6 +67,16 @@ public class SourcesActivity extends AppCompatActivity {
 
     public void openSettingsActivity() {
         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openQuizActivity() {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSourcesActivity() {
+        Intent intent = new Intent(this, SourcesActivity.class);
         startActivity(intent);
     }
 }

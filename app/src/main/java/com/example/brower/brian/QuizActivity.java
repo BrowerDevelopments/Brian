@@ -1,4 +1,4 @@
-package com.example.brower.brian.quiz;
+package com.example.brower.brian;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.brower.brian.HomeActivity;
-import com.example.brower.brian.R;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -24,7 +21,10 @@ public class QuizActivity extends AppCompatActivity {
     private Button quit_button;
 
 //    Menu Bar Buttons
-    private ImageButton home_button;
+    private ImageButton explore_button;
+    private ImageButton quiz_button;
+    private ImageButton settings_button;
+    private ImageButton sources_button;
 
     // CHANGE BASED ON NUM OF QUESTIONS
     private int questionNumberMax = 3;
@@ -38,11 +38,35 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        home_button = (ImageButton)findViewById(R.id.home_button);
-        home_button.setOnClickListener(new View.OnClickListener() {
+        explore_button = (ImageButton)findViewById(R.id.explore_button);
+        explore_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeActivity();
+                openExploreActivity();
+            }
+        });
+
+        settings_button = (ImageButton)findViewById(R.id.settings_button);
+        settings_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettingsActivity();
+            }
+        });
+
+        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
+        quiz_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity();
+            }
+        });
+
+        sources_button = (ImageButton)findViewById(R.id.sources_button);
+        sources_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSourcesActivity();
             }
         });
 
@@ -162,8 +186,23 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    public void openHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
+    public void openExploreActivity() {
+        Intent intent = new Intent(this, ExploreActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSettingsActivity() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openQuizActivity() {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSourcesActivity() {
+        Intent intent = new Intent(this, SourcesActivity.class);
         startActivity(intent);
     }
 

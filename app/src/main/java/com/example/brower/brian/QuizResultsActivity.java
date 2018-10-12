@@ -1,22 +1,26 @@
 package com.example.brower.brian;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class SettingsActivity extends AppCompatActivity {
+public class QuizResultsActivity extends AppCompatActivity {
 
     private ImageButton explore_button;
-    private ImageButton settings_button;
     private ImageButton quiz_button;
+    private ImageButton settings_button;
     private ImageButton sources_button;
+
+    public int score = QuizActivity.getmScore();
+    private TextView mScoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_quiz_results);
 
         explore_button = (ImageButton)findViewById(R.id.explore_button);
         explore_button.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +38,14 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
+        quiz_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity();
+            }
+        });
+
         sources_button = (ImageButton)findViewById(R.id.sources_button);
         sources_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,13 +54,8 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
-        quiz_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuizActivity();
-            }
-        });
+        mScoreView = (TextView)findViewById(R.id.score);
+        updateScore();
     }
 
     public void openExploreActivity() {
@@ -69,5 +76,9 @@ public class SettingsActivity extends AppCompatActivity {
     public void openSourcesActivity() {
         Intent intent = new Intent(this, SourcesActivity.class);
         startActivity(intent);
+    }
+
+    private void updateScore() {
+        mScoreView.setText("" + score);
     }
 }

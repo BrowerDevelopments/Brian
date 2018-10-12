@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.QuizResultsActivity">
+    tools:context=".QuizResultsActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -40,6 +40,7 @@
                 android:textColor="#FFFFFF" />
 
             <ImageButton
+                android:id="@+id/sources_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -76,11 +77,12 @@
                 android:src="@drawable/ic_action_home" />
 
             <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/quiz_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
-                android:src="@drawable/ic_action_hamburger" />
+                android:src="@drawable/ic_action_quiz" />
 
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/settings_button"

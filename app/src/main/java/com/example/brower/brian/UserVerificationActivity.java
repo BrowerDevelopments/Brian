@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.brower.brian.quiz.QuizActivity;
-
 public class UserVerificationActivity extends AppCompatActivity {
     private Button accept_button;
 

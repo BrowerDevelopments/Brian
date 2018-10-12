@@ -2,22 +2,16 @@ package com.example.brower.brian;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-
-import com.example.brower.brian.quiz.QuizResultsActivity;
-
-import java.util.Set;
 
 public class ExploreActivity extends AppCompatActivity {
 
     private ImageButton explore_button;
     private ImageButton settings_button;
+    private ImageButton quiz_button;
+    private ImageButton sources_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +33,22 @@ public class ExploreActivity extends AppCompatActivity {
                 openSettingsActivity();
             }
         });
+
+        quiz_button = (ImageButton)findViewById(R.id.quiz_button);
+        quiz_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity();
+            }
+        });
+
+        sources_button = (ImageButton)findViewById(R.id.sources_button);
+        sources_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSourcesActivity();
+            }
+        });
     }
 
     public void openExploreActivity() {
@@ -48,6 +58,16 @@ public class ExploreActivity extends AppCompatActivity {
 
     public void openSettingsActivity() {
         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openQuizActivity() {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
+    public void openSourcesActivity() {
+        Intent intent = new Intent(this, SourcesActivity.class);
         startActivity(intent);
     }
 
