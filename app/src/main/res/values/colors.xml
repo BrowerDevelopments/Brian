@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4fc3f7</color>
-    <color name="colorPirmaryLight">#8bf6ff</color>
-    <color name="colorPrimaryDark">#0093c4</color>
-    <color name="colorText">#757575</color>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorText">#FF5722</color>
 </resources>
-<!-- these are the app colors -->
-<!-- new thing -->
