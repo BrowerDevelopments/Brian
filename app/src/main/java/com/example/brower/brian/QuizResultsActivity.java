@@ -26,6 +26,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         explore_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetScore();
                 openExploreActivity();
             }
         });
@@ -34,6 +35,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         settings_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetScore();
                 openSettingsActivity();
             }
         });
@@ -42,6 +44,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         quiz_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetScore();
                 openQuizActivity();
             }
         });
@@ -50,6 +53,7 @@ public class QuizResultsActivity extends AppCompatActivity {
         sources_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetScore();
                 openSourcesActivity();
             }
         });
@@ -80,5 +84,9 @@ public class QuizResultsActivity extends AppCompatActivity {
 
     private void updateScore() {
         mScoreView.setText("" + score);
+    }
+
+    public void resetScore() {
+        QuizActivity.resetmScore();
     }
 }

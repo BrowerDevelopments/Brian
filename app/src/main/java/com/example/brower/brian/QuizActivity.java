@@ -210,6 +210,10 @@ public class QuizActivity extends AppCompatActivity {
         return mScore;
     }
 
+    public static void resetmScore() {
+        mScore = 0;
+    }
+
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
