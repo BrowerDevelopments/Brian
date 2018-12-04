@@ -27,7 +27,7 @@ public class QuizActivity extends AppCompatActivity {
     private ImageButton sources_button;
 
     // CHANGE BASED ON NUM OF QUESTIONS
-    private int questionNumberMax = 3;
+    private int questionNumberMax = 9;
 
     private String mAnswer;
     private static int mScore = 0;
